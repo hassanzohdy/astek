@@ -1,0 +1,121 @@
+# Astek
+
+Simple application to write html pages in organized way.
+
+# Requirements
+- PHP >= 7.0
+
+# Installation
+- download the project.
+- Run in the command line `composer install`.
+- All done.
+
+# Usage
+Edit `config.json` file to adjust your needs
+
+```json
+{
+    "appName": "Hello, World!",
+    "favicon": "images/vicon.png",
+    "styles": [
+        "css/bootstrap.min.css",
+        "css/font-awesome.min.css"
+    ],
+    "js": [
+        "js/jquery.min.js"
+    ],
+    "common": {
+        "beforeContent": [
+            "header"
+        ],
+        "afterContent": [
+            "footer"
+        ]
+    },
+    "pages": {
+        "default": "home",
+        "list": [
+            "home",
+            "page-1",
+            "page-2"
+        ]
+    }
+}
+```
+
+The file is **self-explained** but here is some details that you may want more explanation,
+
+| Key                    | Description                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------- |
+| `appName`              | Page Title                                                                        |
+| `favicon`              | Path to favicon: **Relative to `style` path**.                                                                        |
+| `styles`              | List of all stylesheets that will be used in the application: **Relative to `style` path**.                                                                        |
+| `js`              | List of all javascript files that will be used in the application: **Relative to `style` path**.                                                                        |
+| `common`               | This list will be attached automatically in every page                            |
+| `common.beforeContent` | List all of the common sections that will be included **before** the main content |
+| `common.afterContent`  | List all of the common sections that will be included **after** the main content  |
+| `pages`                | List all of the app pages                                                         |
+| `pages.default`        | Default page to be loaded if there is no query string in the url                  |
+
+# Opening the application
+Once you type in the browser the path to your application `localhost/asek`, it will load the default page that you set in the `config.json` file.
+
+If you want to start developing another page, just append the query string `?page=` with your page name.
+
+For example: `localhost/astek?page=contact-us` to start developing contact us page.
+
+## Common folder
+Add all of your common php files `common.php` in that folder like header, footer, sidebar..etc.
+
+## Pages folder
+All of applications pages `page.php` **body only** must be included here 
+
+# Styling
+
+By default, the application uses `scss` for rendering your code **Not external files**.
+
+All of `sass` files **MUST** be included in `style/scss` directory.
+
+`style/scss/app.scss` is the entry point to your styling code.
+
+By default, there are many **helpers** attached to help you write code faster.
+
+- [Compass](http://compass-style.org/) Great library to prefix your css3 codes
+- [Response](https://github.com/hassanzohdy/sass-helpers) Simple yet powerful mixin to write your responsive code in elegant way.
+- Margins: list of classes for margins to adjust it so easily
+- Paddings: list of classes for paddings to adjust it so easily
+- Colors: Put all of your main colors there so you can it in the entire application with some nice mixins to directly include it in your code.
+- Standard: this is just my styling standard code that i use in my applications, something like `resetting` some properties.
+
+
+## Styling pages and commons
+
+### Common sections
+All of the common sections will have a files to be included in every page and will be listed in `style/scss/common/`.
+> If the `common-file.scss` file doesn't exist, it will be created automatically.
+
+
+### Pages
+Every page will have its own styling file located in `style/scss/pages/` based on its name.
+
+> If the `page-name-file.scss` file doesn't exist, it will be created automatically.
+
+# Layout
+All common sections + current page are contained in the `layout.php` file.
+
+Feel free if you want to add or modify it.
+
+> Every page will add an id to the `body` tag, for example if we are in the home page then the `body` tag id will be `home-page` for its name so it can be easy to write your code based on current page only.
+
+# Attached plugins
+
+- Bootstrap 4.1.1
+- Font awesome 5.1 
+- jquery 3.3.1
+
+> You can add font awesome icon directly using `fa($icon, $prefix = 'fas')`.
+> You may also add additional classes in the `$icon` parameter, for example fa('home colored', 'fas') will output `<i class="fas fa-home colored"></i>`.
+
+# Production
+
+Every time you request a page, the compiled file will appear in the `production` directory with its name, for example: `production/home.html` when you request the home page.

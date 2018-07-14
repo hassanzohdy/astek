@@ -1,0 +1,27 @@
+{
+    "appName": "Hello, World!",
+    "favicon": "images/vicon.png",
+    "styles": [
+        "css/bootstrap.min.css",
+        "css/font-awesome.min.css"
+    ],
+    "js": [
+        "js/jquery.min.js"
+    ],
+    "common": {
+        "beforeContent": [
+            "header"
+        ],
+        "afterContent": [
+            "footer"
+        ]
+    },
+    "pages": {
+        "default": "home",
+        "list": [
+            "home",
+            "page-1",
+            "page-2"
+        ]
+    }
+}

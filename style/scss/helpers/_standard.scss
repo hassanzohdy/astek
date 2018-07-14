@@ -1,0 +1,115 @@
+html, body {
+    font-size: 10px;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.inline {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.v-top {
+    vertical-align: top !important;
+}
+
+.v-middle {
+    vertical-align: middle !important;
+}
+
+.v-bottom {
+    vertical-align: bottom !important;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+[readonly] {
+    cursor: not-allowed;
+}
+
+*:focus {
+    outline: none;
+}
+
+.gray {
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    filter: grayscale(100%);
+    filter: url(desaturate.svg#greyscale);
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    filter: grayscale(100%);
+}
+
+.flip {
+    transform: scaleX(-1);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.no-transition {
+    transition: none !important;
+}
+
+.width-20 {
+    width: 20% !important;
+}
+
+.width-80 {
+    width: 80% !important;
+}
+
+/** 
+* Center element Vertically 
+* This requires the selector to have at any non static-position value
+*/
+.v-center {
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+/** 
+* Center element horizontally 
+* This requires the selector to have at any non static-position value
+*/
+.h-center {
+    left: 50%;
+    @include transform(translateX(-50%));
+}

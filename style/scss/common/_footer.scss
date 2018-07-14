@@ -1,0 +1,6 @@
+footer {
+    @include bgMain();
+    h1 {
+        color: #FFF !important;
+    }
+}

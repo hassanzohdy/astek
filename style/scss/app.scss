@@ -1,0 +1,12 @@
+@import 'compass/compass/css3';
+@import 'helpers/responsive';
+@import 'helpers/standard';
+@import 'helpers/colors';
+@import 'helpers/margins';
+@import 'helpers/paddings';
+
+// include partials
+@import 'common/header';
+@import 'common/footer';
+
+// from this point, the pages/page-name.scss will be called automatically!
