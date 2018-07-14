@@ -91,7 +91,6 @@ By default, there are many **helpers** attached to help you write code faster.
 - Colors: Put all of your main colors there so you can it in the entire application with some nice mixins to directly include it in your code.
 - Standard: this is just my styling standard code that i use in my applications, something like `resetting` some properties.
 
-
 ## Styling pages and commons
 
 ### Common sections
@@ -103,6 +102,14 @@ All of the common sections will have a files to be included in every page and wi
 Every page will have its own styling file located in `style/scss/pages/` based on its name.
 
 > If the `page-name-file.scss` file doesn't exist, it will be created automatically.
+
+
+### Styling flow
+The order of called files in the `sass` sections as follows:
+- app.scss
+- Any `import` file in the `app.scss`
+- All `common` sass files
+- Current page `scss` file 
 
 # Layout
 All common sections + current page are contained in the `layout.php` file.
