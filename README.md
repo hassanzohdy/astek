@@ -65,10 +65,14 @@ If you want to start developing another page, just append the query string `?pag
 For example: `localhost/astek?page=contact-us` to start developing contact us page.
 
 ## Common folder
-Add all of your common php files `common.php` in that folder like header, footer, sidebar..etc.
+Add all of your common in that folder like header, footer, sidebar..etc.
+
+> Any common file **MUST BE** a php file, like `header.php`, `footer.php` ..etc.
 
 ## Pages folder
-All of applications pages `page.php` **body only** must be included here 
+All of applications pages **body only** must be included here 
+
+> Any page file **MUST BE** a php file, like `home.php`, `contact-us.php` ..etc.
 
 # Styling
 
