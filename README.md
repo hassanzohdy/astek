@@ -6,7 +6,7 @@ Simple application to write html pages in organized way.
 - PHP >= 7.0
 
 # Installation
-- download the project.
+- Download the project.
 - In the project directory, run in the command line `composer install`.
 - All done.
 
@@ -15,7 +15,7 @@ Edit `config.json` file to adjust your needs
 
 ```json
 {
-    "appName": "Hello, World!",
+    "title": "Hello, World!",
     "favicon": "images/favicon.png",
     "styles": [
         "css/bootstrap.min.css",
@@ -65,7 +65,7 @@ The file is **self-explained** but here is some details that you may want more e
 
 | Key                    | Description                                                                       |
 | ---------------------- | --------------------------------------------------------------------------------- |
-| `appName`              | Page Title                                                                        |
+| `title`              | Page Title for all pages                                                                        |
 | `favicon`              | Path to favicon: **Relative to `style` path**.                                                                        |
 | `styles`              | List of all stylesheets that will be used in the application: **Relative to `style` path**.                                                                        |
 | `js`              | List of all javascript files that will be used in the application: **Relative to `style` path**.                                                                        |
