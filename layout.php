@@ -36,9 +36,8 @@
   }
   ?>
 
-  <?php foreach ($config->js as $script) {
-    echo "<script src=\"style/$script\"></script>";
-  }
-  ?>
+  <?php foreach ($config->js as $script) { ?>
+  <script src="style/<?=$script?>"></script>
+   <?php } ?>
 </body>
 </html>
