@@ -16,7 +16,7 @@ Edit `config.json` file to adjust your needs
 ```json
 {
     "appName": "Hello, World!",
-    "favicon": "images/vicon.png",
+    "favicon": "images/favicon.png",
     "styles": [
         "css/bootstrap.min.css",
         "css/font-awesome.min.css"
@@ -36,7 +36,25 @@ Edit `config.json` file to adjust your needs
         "default": "home",
         "list": [
             "home",
-            "page-1",
+            {
+                "name": "category",
+                "title": "My Category Page",
+                "favicon": "images/favicon.png",
+                "styles": [
+                    "extra-style.css"
+                ],
+                "js": [
+                    "js/extra-js.js"
+                ],
+                "common": {
+                    "beforeContent": [
+                        "special-products"
+                    ],
+                    "afterContent": [
+                        "banner"
+                    ]
+                }
+            },
             "page-2"
         ]
     }
@@ -56,6 +74,15 @@ The file is **self-explained** but here is some details that you may want more e
 | `common.afterContent`  | List all of the common sections that will be included **after** the main content  |
 | `pages`                | List all of the app pages                                                         |
 | `pages.default`        | Default page to be loaded if there is no query string in the url                  |
+| `pages.list`        | A list of all of the application pages, each page could be a string to represent the page name or an object to override the default config values. 
+    **Available options**: 
+    `name`: Page name.
+    `title` Page title.
+    `favicon`: favicon for that page.
+    `styles`: Add more stylesheet files to the default `styles` section
+    `js`: Add more javascript files to the default `js` section.
+    `common`: Add more common sections.
+ |
 
 # Launching the application
 Once you type in the browser the path to your application `localhost/asek`, it will load the default page that you set in the `config.json` file.
