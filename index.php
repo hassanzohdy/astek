@@ -38,7 +38,7 @@ try {
     die($e->getMessage());
 }
 
-$cssFile = 'style/css/' . $page . '.css';
+$cssFile = 'style/css/' . $page . '.css?v=' . time();
 
 file_put_contents($cssFile, $content);
 
