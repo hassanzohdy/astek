@@ -57,7 +57,7 @@ The file is **self-explained** but here is some details that you may want more e
 | `pages`                | List all of the app pages                                                         |
 | `pages.default`        | Default page to be loaded if there is no query string in the url                  |
 
-# Opening the application
+# Launching the application
 Once you type in the browser the path to your application `localhost/asek`, it will load the default page that you set in the `config.json` file.
 
 If you want to start developing another page, just append the query string `?page=` with your page name.
@@ -91,12 +91,11 @@ By default, there are many **helpers** attached to help you write code faster.
 - Colors: Put all of your main colors there so you can it in the entire application with some nice mixins to directly include it in your code.
 - Standard: this is just my styling standard code that i use in my applications, something like `resetting` some properties.
 
-## Styling pages and commons
+## Styling common sections and pages
 
 ### Common sections
 All of the common sections will have a files to be included in every page and will be listed in `style/scss/common/`.
 > If the `common-file.scss` file doesn't exist, it will be created automatically.
-
 
 ### Pages
 Every page will have its own styling file located in `style/scss/pages/` based on its name.
@@ -110,6 +109,13 @@ The order of called files in the `sass` sections as follows:
 - Any `import` file in the `app.scss`
 - All `common` sass files
 - Current page `scss` file 
+
+### Styling production
+Ad the end of every request, a file with page name will be created in the `css` folder based on current page as it will be generated automatically from the `scss` code.
+
+For example if we're developing `product` page, then its corresponding css file will be `style/css/product.css`.
+
+> Please note that the page style file will include only `sass` code not the other stylesheets in the `config.json`
 
 # Layout
 All common sections + current page are contained in the `layout.php` file.
