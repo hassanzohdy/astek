@@ -7,7 +7,7 @@ Simple application to write html pages in organized way.
 
 # Installation
 - download the project.
-- Run in the command line `composer install`.
+- In the project directory, run in the command line `composer install`.
 - All done.
 
 # Usage
