@@ -63,18 +63,18 @@ Edit `config.json` file to adjust your needs
 
 The file is **self-explained** but here is some details that you may want more explanation,
 
-| Key                    | Description                                                                       |
-| ---------------------- | --------------------------------------------------------------------------------- |
-| `title`              | Page Title for all pages                                                                        |
-| `favicon`              | Path to favicon: **Relative to `style` path**.                                                                        |
-| `styles`              | List of all stylesheets that will be used in the application: **Relative to `style` path**.                                                                        |
-| `js`              | List of all javascript files that will be used in the application: **Relative to `style` path**.                                                                        |
-| `common`               | This list will be attached automatically in every page                            |
-| `common.beforeContent` | List all of the common sections that will be included **before** the main content |
-| `common.afterContent`  | List all of the common sections that will be included **after** the main content  |
-| `pages`                | List all of the app pages                                                         |
-| `pages.default`        | Default page to be loaded if there is no query string in the url                  |
-| `pages.list`        | A list of all of the application pages, each page could be a string to represent the page name or an object to override the default config values. 
+| Key                    | Description                                                                                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`                | Page Title for all pages                                                                                                                           |
+| `favicon`              | Path to favicon: **Relative to `style` path**.                                                                                                     |
+| `styles`               | List of all stylesheets that will be used in the application: **Relative to `style` path**.                                                        |
+| `js`                   | List of all javascript files that will be used in the application: **Relative to `style` path**.                                                   |
+| `common`               | This list will be attached automatically in every page                                                                                             |
+| `common.beforeContent` | List all of the common sections that will be included **before** the main content                                                                  |
+| `common.afterContent`  | List all of the common sections that will be included **after** the main content                                                                   |
+| `pages`                | List all of the app pages                                                                                                                          |
+| `pages.default`        | Default page to be loaded if there is no query string in the url                                                                                   |
+| `pages.list`           | A list of all of the application pages, each page could be a string to represent the page name or an object to override the default config values. 
     **Available options**: 
     `name`: Page name.
     `title` Page title.
