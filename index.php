@@ -9,6 +9,19 @@ $config = json_decode(file_get_contents('config.json'));
 
 $page = $_GET['page'] ?? $config->pages->default;
 
+// loop through pages list to check if there are some extra info for the current page
+foreach ($config->pages->list as $listPage) {
+    if (is_object($listPage) and $listPage->name == $page) {
+        $config->title = $listPage->title ?? $config->title;
+
+        foreach (['styles', 'js', 'common', ] as $section) {
+            if (! empty($listPage->$section)) {
+                $config->$section = (object) array_merge_recursive((array) $config->$section, (array) $listPage->$section);
+            }
+        }
+    }
+}
+
 $scss = new Compiler();
 $scss->setImportPaths('style/scss');
 
@@ -38,9 +51,12 @@ try {
     die($e->getMessage());
 }
 
-$cssFile = 'style/css/' . $page . '.css?v=' . time();
+$cssFile = 'style/css/' . $page . '.css';
 
 file_put_contents($cssFile, $content);
+
+// disable browser cache 
+$cssFile .= '?v=' . time();
 
 ob_start();
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style/<?=$config->favicon;?>" rel="shortcut icon">
-  <title><?=$config->appName?></title>
+  <title><?=$config->title?></title>
   <?php foreach ($config->styles as $stylesheet) { ?>
 <link href="style/<?=$stylesheet?>" rel="stylesheet" />
   <?php } ?>

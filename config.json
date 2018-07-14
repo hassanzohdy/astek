@@ -1,6 +1,6 @@
 {
-    "appName": "Hello, World!",
-    "favicon": "images/vicon.png",
+    "title": "Hello, World!",
+    "favicon": "images/favicon.png",
     "styles": [
         "css/bootstrap.min.css",
         "css/font-awesome.min.css"
@@ -21,7 +21,25 @@
         "default": "home",
         "list": [
             "home",
-            "page-1",
+            {
+                "name": "category",
+                "title": "My Category Page",
+                "favicon": "images/favicon.png",
+                "styles": [
+                    "extra-style.css"
+                ],
+                "js": [
+                    "js/extra-js.js"
+                ],
+                "common": {
+                    "beforeContent": [
+                        "special-products"
+                    ],
+                    "afterContent": [
+                        "banner"
+                    ]
+                }
+            },
             "page-2"
         ]
     }
