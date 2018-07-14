@@ -6,7 +6,8 @@
         "css/font-awesome.min.css"
     ],
     "js": [
-        "js/jquery.min.js"
+        "js/jquery.min.js",
+        "js/bootstrap.min.js"
     ],
     "common": {
         "beforeContent": [
