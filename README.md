@@ -74,7 +74,7 @@ The file is **self-explained** but here is some details that you may want more e
 | `common.afterContent`  | List all of the common sections that will be included **after** the main content                                                                                                                                            |
 | `pages`                | List all of the app pages                                                                                                                                                                                                   |
 | `pages.default`        | Default page to be loaded if there is no query string in the url                                                                                                                                                            |
-| `pages.list`           | A list of all of the application pages, each page could be a string to represent the page name or an object to override the default config values. See [#Available Options for each page](#available-options-for-each page) |
+| `pages.list`           | A list of all of the application pages, each page could be a string to represent the page name or an object to override the default config values. See [Available Options for each page](#available-options-for-each page) |
 
 # Available options for each page: 
 - `name`: Page name.
